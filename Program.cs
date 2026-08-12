@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.AccessControl;
+using System.Security.Cryptography;
 class Program
 {
     static void Main(string[] args)
@@ -20,7 +21,7 @@ class Program
         Console.WriteLine($"Horas trabajadas: {horas}");
         Console.WriteLine($"Consumo por hora: {consumoHora}");
         Console.WriteLine($"Consumo Total:  {consumoTotal}");
-    */
+
 
         Console.WriteLine("==== NIVEL DE ACCESO ====");
 
@@ -34,6 +35,26 @@ class Program
         else
         {
             Console.WriteLine("Acceso restringido");
+    */    
+
+        Console.WriteLine("==== SISTEMA DE AUTORIZACIÓN ====");
+
+        Console.Write("Digite su edad: ");
+        int edad = int.Parse(Console.ReadLine()!);
+
+        Console.Write("Ingrese el nivel de seguridad: ");
+        int nivel = int.Parse(Console.ReadLine()!);
+
+        Console.Write("Crendencial activa (true/false): ");
+        bool activo = bool.Parse(Console.ReadLine()!);
+
+        if (edad >= 18 && nivel >= 3 && activo)
+        {
+            Console.WriteLine("\nAcceso autorizado");
+        }
+        else
+        {
+            Console.WriteLine("\nAcceso denegado");
         }
     }
 }
