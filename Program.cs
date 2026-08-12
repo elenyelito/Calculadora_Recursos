@@ -35,7 +35,8 @@ class Program
         else
         {
             Console.WriteLine("Acceso restringido");
-    */    
+        }
+
 
         Console.WriteLine("==== SISTEMA DE AUTORIZACIÓN ====");
 
@@ -55,6 +56,37 @@ class Program
         else
         {
             Console.WriteLine("\nAcceso denegado");
+        }
+    */
+
+        Console.WriteLine("==== CLASIFICADOR DE ALERTAS ====");
+
+        Console.Write("Digite un nivelde alerta (0 a 10): ");
+        int nivel = int.Parse(Console.ReadLine()!);
+
+        if (nivel == 0)
+        {
+            Console.WriteLine("NORMAL");
+        }
+        else if (nivel >= 1 && nivel <= 3)
+        {
+            Console.WriteLine("ALERTA BAJA");
+        }
+        else if (nivel >= 4 && nivel <= 6)
+        {
+            Console.WriteLine("ALERTA MEDIA");
+        }
+        else if (nivel >= 7 && nivel <= 9)
+        {
+            Console.WriteLine("CRÍTICO");
+        }
+        else if (nivel == 10)
+        {
+            Console.WriteLine("EMERGENCIA");
+        }
+        else
+        {
+            Console.WriteLine("NIVEL DE ALERTA INVÁLIDO");
         }
     }
 }
