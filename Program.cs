@@ -57,7 +57,7 @@ class Program
         {
             Console.WriteLine("\nAcceso denegado");
         }
-    */
+    
 
         Console.WriteLine("==== CLASIFICADOR DE ALERTAS ====");
 
@@ -87,6 +87,40 @@ class Program
         else
         {
             Console.WriteLine("NIVEL DE ALERTA INVÁLIDO");
+        }
+
+    */
+        Console.WriteLine("==== PANEL DE CONTROL ====");
+
+        Console.WriteLine("1. Consultar estado");
+        Console.WriteLine("2. Mostrar temperatura");
+        Console.WriteLine("3. Mostrar presión");
+        Console.WriteLine("4. Reiniciar sistema");
+        Console.WriteLine("5. Salir");
+        Console.WriteLine("Opción inválida");
+
+        int opcion = int.Parse(Console.ReadLine()!);
+
+        switch (opcion)
+        {
+            case 1:
+                Console.WriteLine("\nConsultando estado del sistema...");
+                break;
+            case 2:
+                Console.WriteLine("\nTemperatura actual: 24°C");
+                break;
+            case 3:
+                Console.WriteLine("\nPresion actual: 1013 hPa");
+                break;
+            case 4:
+                Console.WriteLine("\nReiniciando sistema...");
+                break;
+            case 5:
+                Console.WriteLine("\nSaliendo del panel...");
+                break;
+            default:
+                Console.WriteLine("\nOpción inválida");
+                break;
         }
     }
 }
